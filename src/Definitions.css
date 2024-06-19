@@ -1,0 +1,64 @@
+.definitions-container {
+    font-family: Arial, sans-serif;
+    border-left: 2px solid #78aaa1;
+    background-color: #f9f9f9;
+    max-width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  .definitions-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 20px 0;
+  }
+  
+  .phonetics {
+    margin-bottom: 20px;
+  }
+  
+  .phonetics h3 {
+    font-size: 20px;
+    color: #555;
+  }
+  
+  .phonetics ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .phonetics li {
+    margin-bottom: 10px;
+  }
+  
+  .phonetics p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .meaning {
+    margin-bottom: 20px;
+  }
+  
+  .meaning h3 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .definition {
+    margin-bottom: 10px;
+  }
+  
+  .definition p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .definition strong {
+    font-weight: bold;
+  }
+  
