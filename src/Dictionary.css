@@ -1,0 +1,31 @@
+.dictionary .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.dictionary .input-group .form-control {
+    border:  1px solid #549ca1;
+    border-radius: 8px;
+    padding: 12px; /* Adjust input padding */
+    color: #333; /* Text color */
+}
+
+.dictionary .input-group .btn {
+    border-radius: 8px; /* Rounded corners */
+    background-color: #549ca1; /* Green background */
+    color: white; /* White text */
+    padding: 12px 24px; /* Padding around text */
+    font-size: 16px; /* Larger font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.dictionary .input-group .btn:hover {
+    background-color: #5cb0a2; /* Darker green on hover */
+}
+.dictionary .input-group .form-control:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: none; /* Remove default focus shadow */
+}
