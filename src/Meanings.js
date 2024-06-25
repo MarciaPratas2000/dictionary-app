@@ -20,21 +20,21 @@ export default function Meanings(props) {
               <li>
                 <strong>Definition:</strong> {definition.definition}
               </li>
-              {definition.example && (
-                <li>
-                  <p>
-                    <em>Example: {definition.example}</em>
-                  </p>
-                </li>
-              )}
               {definition.synonyms.length > 0 && (
                 <li>
-                  <strong>Synonyms:</strong> {definition.synonyms.join(", ")}
+                  <strong className="text-muted">Synonyms:</strong> {definition.synonyms.join(", ")}
                 </li>
               )}
               {definition.antonyms.length > 0 && (
                 <li>
                   <strong>Antonyms:</strong> {definition.antonyms.join(", ")}
+                </li>
+              )}
+                {definition.example && (
+                <li>
+                  <p className="m-0">
+                    <em>Example: {definition.example}</em>
+                  </p>
                 </li>
               )}
             </ul>
