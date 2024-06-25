@@ -81,3 +81,13 @@
   font-size: 12px; /* Slightly reduced font size for definition content */
   color: #555; /* Darkened text color for better readability */
 }
+
+.definitions-container .view-more-btn {
+  color: #668f87; /* Text color */
+  border:none;/* Remove default border */
+  font-size: 14px; /* Font size */
+  cursor: pointer; /* Cursor style */
+  border-radius: 4px; /* Rounded corners */
+  text-decoration: underline;
+  background-color: whitesmoke;
+}
