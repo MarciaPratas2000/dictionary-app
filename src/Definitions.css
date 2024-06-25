@@ -1,64 +1,83 @@
 .definitions-container {
-    font-family: Arial, sans-serif;
-    border-left: 2px solid #78aaa1;
-    background-color: #f9f9f9;
-    max-width: 90%;
-    display: flex;
-    justify-content: flex-start;
-    margin: 0 auto;
-    padding: 10px;
-    margin-top: 20px;
-  }
-  
-  .definitions-container h2 {
-    font-size: 24px;
-    color: #333;
-    margin: 20px 0;
-  }
-  
-  .phonetics {
-    margin-bottom: 20px;
-  }
-  
-  .phonetics h3 {
-    font-size: 20px;
-    color: #555;
-  }
-  
-  .phonetics ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .phonetics li {
-    margin-bottom: 10px;
-  }
-  
-  .phonetics p {
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .meaning {
-    margin-bottom: 20px;
-  }
-  
-  .meaning h3 {
-    font-size: 20px;
-    color: #555;
-    margin-bottom: 10px;
-  }
-  
-  .definition {
-    margin-bottom: 10px;
-  }
-  
-  .definition p {
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .definition strong {
-    font-weight: bold;
-  }
-  
+  font-family: Arial, sans-serif;
+  border-left: 4px solid #78aaa1; /* Increased border-left thickness for emphasis */
+  background-color: #f9f9f9;
+  max-width: 90%;
+  margin: 15px auto; /* Reduced margin for spacing */
+  padding: 18px; /* Slightly reduced padding for better spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added subtle box shadow for depth */
+  display: flex;
+  flex-direction: column; /* Ensure flex container behaves as a column */
+}
+
+.definitions-container h2,
+.definitions-container h3 {
+  font-size: 22px; /* Slightly reduced font size for headings */
+  color: #655b5b;
+  margin: 15px 0; /* Reduced margin for headings */
+}
+
+.definitions-container h2 strong,
+.definitions-container h3 {
+  color: #589b8f;
+}
+
+/* Phonetics Section */
+.definitions-container .phonetics {
+  margin-bottom: 18px; /* Slightly reduced margin-bottom */
+}
+
+.definitions-container .phonetics h3 {
+  font-size: 22px; /* Matched font size with other headings */
+  margin-bottom: 8px; /* Slightly reduced margin-bottom */
+  color: #589b8f; /* Matched color with strong elements */
+}
+
+.definitions-container .phonetics li {
+  margin-bottom: 8px; /* Slightly reduced margin-bottom for list items */
+  font-size: 14px; /* Slightly reduced font size for phonetic details */
+  list-style: none; /* Removed bullet points */
+}
+
+.definitions-container .phonetics p {
+  font-size: 12px; /* Slightly reduced font size for phonetic details */
+  color: #555; /* Darkened text color for better readability */
+}
+
+/* Meanings Section */
+.definitions-container .meanings {
+  margin-top: 18px; /* Slightly reduced margin-top */
+}
+
+.definitions-container .meanings li {
+  margin-top: 12px; /* Reduced margin-top for list items */
+  font-size: 14px; /* Slightly reduced font size for meanings */
+  list-style: none; /* Removed bullet points */
+}
+
+/* Individual Definition Block */
+.definitions-container .meaning .definition {
+  margin-bottom: 8px; /* Slightly reduced margin-bottom for definition blocks */
+  padding-left: 20px; /* Increased left padding for definition blocks */
+}
+
+.definitions-container .meaning .definition h3 {
+  font-size: 18px; /* Reduced font size for definition headings */
+  margin-bottom: 4px; /* Slightly reduced margin-bottom */
+  color: #589b8f; /* Matched color with strong elements */
+}
+
+/* General Definitions */
+.definitions-container .definition {
+  margin-bottom: 8px; /* Slightly reduced margin-bottom for definition blocks */
+  font-size: 14px; /* Slightly reduced font size for definitions */
+}
+
+.definitions-container .definition li {
+  margin: 0 auto; /* Centered list items horizontally */
+}
+
+.definitions-container .definition p {
+  font-size: 12px; /* Slightly reduced font size for definition content */
+  color: #555; /* Darkened text color for better readability */
+}
