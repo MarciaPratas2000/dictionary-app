@@ -1,0 +1,25 @@
+.ImageSearch {
+    border-right: 4px solid #78aaa1; /* Increase border thickness for emphasis */
+    background-color: #f9f9f9;
+    margin: 15px auto; /* Reduced margin for spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    max-width: 850px;
+  }
+  
+  .ImageSearch .gallery p {
+    font-size: 22px; /* Slightly reduced font size for headings */
+    text-align: right;
+  }
+  
+  .ImageSearch .gallery img {
+    transform: scale(0.90); /* Scale image by default */
+    max-height: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    object-fit: contain; /* Ensure images maintain aspect ratio */
+  }
+  
+  .ImageSearch .gallery img:hover {
+    transform: scale(1.05); /* Increase image scale on hover */
+  }
+  

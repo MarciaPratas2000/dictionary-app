@@ -1,33 +1,63 @@
-
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { createClient } from 'pexels';
-import axios from "axios";
+import './ImageSearch.css';
 
-const client = createClient('VkpXApWnyynNn5JBfDhU3EfE46dqoCbYHRR802ClX7tTfRkyruhwLG1c'); // Replace with your actual API key
-const query = 'Nature';
+const client = createClient('VkpXApWnyynNn5JBfDhU3EfE46dqoCbYHRR802ClX7tTfRkyruhwLG1c');
 
-export default function ImageSearch() {
+export default function ImageSearch(props) {
   const [photos, setPhotos] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [query, setQuery] = useState("");
 
-  useEffect(() => {
-    client.photos.search({ query, per_page: 1 })
+  function fetchPhotos(searchTerm) {
+    setLoading(true);
+    client.photos.search({ query: searchTerm, per_page: 6 })
       .then(response => {
         setPhotos(response.photos);
       })
       .catch(error => {
         console.error('Error fetching photos:', error);
+        setPhotos([]);
+      })
+      .finally(() => {
+        setLoading(false);
       });
-  }, []); // Empty dependency array ensures this effect runs only once
+  }
+
+  if (props.searchTerm && query !== props.searchTerm) {
+    setQuery(props.searchTerm);
+    fetchPhotos(props.searchTerm);
+  }
 
   return (
-    <div>
-      <h2>Photos of Nature</h2>
-      <div>
-        {photos.map(photo => (
-          <img key={photo.id} src={photo.src.medium} alt={photo.photographer} />
-        ))}
-      </div>
+    <div className="container-fluid ImageSearch">
+      {!loading && photos.length > 0 && (
+        <div className="row justify-content-center">
+          <div className="gallery">
+            <p className="text-muted pt-2 pe-2">Gallery</p>
+            {photos.map(photo => (
+              <img
+                key={photo.id} 
+                src={photo.src.medium}
+                alt={photo.photographer}
+                className="col-md-4 col-sm-6 col-12 mb-2 img-fluid rounded shadow-sm"
+              />
+            ))}
+          </div>
+        </div>
+      )}
+  
+      {loading && (
+        <div className="row justify-content-center">
+          <p>Loading...</p>
+        </div>
+      )}
+  
+      {!loading && photos.length === 0 && (
+        <div className="d-none">
+        </div>
+      )}
     </div>
   );
+  
 }
-

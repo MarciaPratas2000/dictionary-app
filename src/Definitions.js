@@ -13,7 +13,6 @@ export default function Definitions(props) {
 
   function apiCall() {
     if (!props.searchTerm) return;
-
     setLoading(true);
     let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${props.searchTerm}`;
     axios

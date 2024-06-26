@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Dictionary.css"; // Import custom CSS file
 import Definitions from "./Definitions"; // Assuming this is your Definitions component
+import ImageSearch from "./ImageSearch";
 
 export default function Dictionary() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -42,9 +43,8 @@ export default function Dictionary() {
   return (
     <div>
       {form}
-      {submitted && searchTerm && <Definitions searchTerm={searchTerm} />}
-      {!submitted && <Definitions searchTerm={previousSearchTerm} />}
-
+      {submitted && searchTerm && <div> <Definitions searchTerm={searchTerm} />  <ImageSearch searchTerm={searchTerm} /> </div>}
+      {!submitted && <div> <Definitions searchTerm={previousSearchTerm} />  <ImageSearch searchTerm={previousSearchTerm}/>  </div>}
     </div>
   );
 }

@@ -96,12 +96,12 @@
 
 
 
-.definition-synonyms-antonyms ul {
+.definitions-container .definition-synonyms-antonyms ul {
   list-style-type: none; /* Remove bullet points */
   padding: 0; /* Remove default padding */
   margin: 0; /* Remove default margin */
 }
 
-.definition-synonyms-antonyms li {
+.definitions-container .definition-synonyms-antonyms li {
   margin-bottom: 10px; /* Space between items */
 }
