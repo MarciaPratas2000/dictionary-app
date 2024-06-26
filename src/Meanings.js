@@ -20,20 +20,15 @@ export default function Meanings(props) {
               <li>
                 <strong>Definition:</strong> {definition.definition}
               </li>
-              {definition.synonyms.length > 0 && (
-                <li>
-                  <strong className="text-muted">Synonyms:</strong> {definition.synonyms.join(", ")}
-                </li>
-              )}
-              {definition.antonyms.length > 0 && (
-                <li>
-                  <strong>Antonyms:</strong> {definition.antonyms.join(", ")}
-                </li>
-              )}
+              <li className="definition-synonyms-antonyms">
+              <SynonymsAntonyms
+                synonyms={definition.synonyms}
+                antonyms={definition.antonyms}/>
+              </li>
                 {definition.example && (
                 <li>
-                  <p className="m-0">
-                    <em>Example: {definition.example}</em>
+                  <p className="m-0 p-0">
+                    Example: <em> {definition.example}</em>
                   </p>
                 </li>
               )}

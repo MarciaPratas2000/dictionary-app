@@ -21,7 +21,7 @@ export default function Dictionary() {
 
   // Define the form JSX within a variable
   const form = (
-    <form className="dictionary container-fluid m-2" onSubmit={handleSubmit}>
+    <form className="dictionary container-fluid align-center m-2" onSubmit={handleSubmit}>
       <span className="input-group m-2">
         <input
           type="search"

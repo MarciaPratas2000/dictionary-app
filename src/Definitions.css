@@ -74,10 +74,12 @@
 }
 
 .definitions-container .definition li {
-  margin: 0 auto; /* Centered list items horizontally */
+  margin: 0 auto ; /* Centered list items horizontally */
 }
 
 .definitions-container .definition p {
+  margin:0;
+  padding: 2px 0;
   font-size: 12px; /* Slightly reduced font size for definition content */
   color: #555; /* Darkened text color for better readability */
 }
@@ -90,4 +92,16 @@
   border-radius: 4px; /* Rounded corners */
   text-decoration: underline;
   background-color: whitesmoke;
+}
+
+
+
+.definition-synonyms-antonyms ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.definition-synonyms-antonyms li {
+  margin-bottom: 10px; /* Space between items */
 }

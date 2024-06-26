@@ -4,16 +4,18 @@ import "./Definitions.css";
 
 export default function SynonymsAntonyms(props) {
   return (
-    <div className="synonyms-antonyms">
+    <div className="synonyms-antonyms ">
       <ul>
       <li>   
       {props.synonyms.length > 0 && (
-      <p className="m-0">
+      <p >
             <strong>Synonyms:</strong> {props.synonyms.join(", ")}
         </p>
       )}
+       </li>
+       <li> 
       {props.antonyms.length > 0 && (
-        <p className="m-0">
+        <p >
           <strong>Antonyms:</strong> {props.antonyms.join(", ")}
         </p>
       )}
